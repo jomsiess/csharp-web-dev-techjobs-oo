@@ -16,7 +16,7 @@ namespace TechJobsOO
 
         // TODO: Add the two necessary constructors.
 
-        public Job()
+        public Job(string id)
         {
             Id = nextId;
             nextId++; 
@@ -34,6 +34,14 @@ namespace TechJobsOO
         public Job(int id)
         {
             Id = id;
+        }
+
+        public Job(string v1, string v2, string v3, string v4, string v5)
+        {
+        }
+
+        public Job()
+        {
         }
 
         public override bool Equals(object obj)
