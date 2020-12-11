@@ -16,7 +16,7 @@ namespace TechJobsOO
 
         // TODO: Add the two necessary constructors.
 
-        public Job(string id)
+        public Job()
         {
             Id = nextId;
             nextId++; 
@@ -40,10 +40,6 @@ namespace TechJobsOO
         {
         }
 
-        public Job()
-        {
-        }
-
         public override bool Equals(object obj)
         {
             return obj is Job job &&
@@ -58,6 +54,11 @@ namespace TechJobsOO
         public override int GetHashCode()
         {
             return HashCode.Combine(Id, Name, EmployerName, EmployerLocation, JobType, JobCoreCompetency);
+        }
+
+        public override string ToString()
+        {
+            return "Hello";
         }
 
         // TODO: Generate Equals() and GetHashCode() methods.

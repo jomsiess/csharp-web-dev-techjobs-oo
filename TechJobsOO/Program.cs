@@ -22,6 +22,9 @@ namespace TechJobsOO
                 Console.WriteLine(job);
             }
             */
+            Job job1 = new Job();
+            Job job2 = new Job();
+            Console.WriteLine(job1.Id + " " + job2.Id);
         }
     }
 }

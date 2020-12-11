@@ -1,5 +1,6 @@
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 using TechJobsOO;
+using System;
 
 namespace TechJobTests
 {
@@ -29,7 +30,7 @@ namespace TechJobTests
             Assert.AreEqual("Persistence", test_job3.JobCoreCompetency.Value);
         }
 
-        }
+    }
 
     [TestClass]
     public class TestJobsForEquality
@@ -43,5 +44,24 @@ namespace TechJobTests
                 Assert.IsFalse(Job.Equals(test_job4, test_job5)); 
             }
         }
+
     }
+
+    //[TestClass]
+    //public class TestForToString
+    //{
+    //    [TestMethod]
+    //    public void TestMethod4()
+    //    {
+    //        Job test_job6 = new Job("Job description", new Employer("ACME"), new Location("Desert"), new PositionType("Quality Control"), new CoreCompetency("Persistence"));
+
+    //        string correctString = "Job Name: ________ {new line character}" +
+    //            "Employer Name: ______" +
+    //            "Position Type" +
+    //            "Location:";
+
+    //        Assert.IsTrue(correctString, << what_to_compare_to >>);
+    //    }
+ //   }
 }
+
