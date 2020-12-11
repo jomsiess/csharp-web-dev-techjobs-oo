@@ -47,21 +47,40 @@ namespace TechJobTests
 
     }
 
-    //[TestClass]
-    //public class TestForToString
-    //{
-    //    [TestMethod]
-    //    public void TestMethod4()
-    //    {
-    //        Job test_job6 = new Job("Job description", new Employer("ACME"), new Location("Desert"), new PositionType("Quality Control"), new CoreCompetency("Persistence"));
+    [TestClass]
+    public class TestForToString
+    {
+        [TestMethod]
+        public void TestMethod4()
+        {
+            Job test_job6 = new Job("Job description", new Employer("ACME"), new Location("Desert"), new PositionType("Quality Control"), new CoreCompetency("Persistence"));
 
-    //        string correctString = "Job Name: ________ {new line character}" +
-    //            "Employer Name: ______" +
-    //            "Position Type" +
-    //            "Location:";
+            string correctString = "Job Name: ________ " + "/n" +
+                "Employer Name: ______" + "/n" +
+                "Location: ______" + "/n" +
+                "Position Type:______" + "/n" +
+                "Core Competency: _______"; 
 
-    //        Assert.IsTrue(correctString, << what_to_compare_to >>);
-    //    }
- //   }
+            Assert.AreEqual(correctString, test_job6.ToString());
+        }
+    }
 }
 
+    [TestClass]
+    public class TestForToString2
+    {
+        [TestMethod]
+        public void TestMethod5()
+        {
+        Job test_job7 = new Job("Job description", new Employer("ACME"), new Location("Desert"), new PositionType("Quality Control"), new CoreCompetency("Persistence"));
+
+        string correctString = "ID: " + test_job7.Id + "\n" +
+            "Job Name: " + test_job7.Name + "\n" +
+            "Employer Name: " + test_job7.EmployerName + "\n" +
+            "Location: " + test_job7.EmployerLocation + "\n" +
+            "Position Type: " + test_job7.JobType + "\n" +
+            "Core Competency: " + test_job7.JobCoreCompetency + "\n";
+
+        Assert.AreEqual(correctString, test_job7.ToString()); 
+    }
+}

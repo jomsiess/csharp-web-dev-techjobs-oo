@@ -58,7 +58,12 @@ namespace TechJobsOO
 
         public override string ToString()
         {
-            return "Hello";
+            return "ID: " + Id + "\n" +
+                "Job Name: " + Name + "\n" +
+                "Employer Name: " + EmployerName + "\n" +
+                "Location: " + EmployerLocation + "\n" +
+                "Position Type: " + JobType + "\n" +
+                "Core Competency: " + JobCoreCompetency + "\n";
         }
 
         // TODO: Generate Equals() and GetHashCode() methods.
